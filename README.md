@@ -29,4 +29,5 @@ Key Points:
 Multithreading: The script utilizes multiple threads to execute tasks concurrently.
 
 1.Asynchronous Operations: While the script simulates asynchronous operations, real-world scenarios might involve true asynchronous programming techniques for more efficient I/O-bound operations.
+
 2.Thread Management: The threading module is used to create, start, and manage threads.
