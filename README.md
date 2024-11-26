@@ -11,12 +11,13 @@ Code Explanation:
 The code consists of three main parts:
 1. Function Definitions:
 download_file(file_id): Simulates downloading a file by sleeping for a random duration and printing a message.
+
 perform_other_task(task_id): Simulates performing another task by sleeping for a random duration and printing a message.
-2. Thread Creation and Execution:
+3. Thread Creation and Execution:
 Creates a list of threads for file downloads and another list for other tasks.
 Starts each thread using the start() method.
 Waits for all threads to finish using the join() method.
-3. Output:
+4. Output:
 Prints messages indicating the start and completion of each download and task.
 Prints a final message when all threads have finished.
 Key Points:
