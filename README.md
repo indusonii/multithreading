@@ -23,6 +23,7 @@ Waits for all threads to finish using the join() method.
 4. Output:
 Prints messages indicating the start and completion of each download and task.
 Prints a final message when all threads have finished.
+
 Key Points:
 
 Multithreading: The script utilizes multiple threads to execute tasks concurrently.
