@@ -14,8 +14,8 @@ The code consists of three main parts:
 download_file(file_id): Simulates downloading a file by sleeping for a random duration and printing a message.
 
 perform_other_task(task_id):
-
 Simulates performing another task by sleeping for a random duration and printing a message.
+
 3. Thread Creation and Execution:
 Creates a list of threads for file downloads and another list for other tasks.
 Starts each thread using the start() method.
