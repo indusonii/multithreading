@@ -3,20 +3,23 @@ import time
 import random
 import unittest
 
+# Simulates downloading a file by sleeping for a random time.
 def download_file(file_id):
-    download_time = random.randint(1, 5)  # Random time between 1 and 5 seconds
+    download_time = random.randint(1, 5)  # Random download time in seconds
     print(f"Starting download of file {file_id}... It will take {download_time} seconds.")
-    time.sleep(download_time)  # Simulate download
+    time.sleep(download_time)
     print(f"Download of file {file_id} completed in {download_time} seconds.")
     return file_id  # Return the file ID to indicate completion
 
+# Simulates performing another task by sleeping for a random time.
 def perform_other_task(task_id):
-    task_time = random.randint(2, 4)  # Random time for other task
+    task_time = random.randint(2, 4)  # Random task time in seconds
     print(f"Starting task {task_id}... It will take {task_time} seconds.")
-    time.sleep(task_time)  # Simulate task work
+    time.sleep(task_time)
     print(f"Task {task_id} completed in {task_time} seconds.")
     return task_id  # Return the task ID to indicate completion
 
+# Creates and starts threads for file downloads and other tasks.
 def run_threads():
     file_ids = [1, 2, 3, 4, 5]
     task_ids = [1, 2, 3]
@@ -53,6 +56,7 @@ def run_threads():
     print("All downloads and tasks are completed.")
     return download_results, task_results
 
+# Unit tests to verify thread execution
 class TestMultithreading(unittest.TestCase):
     def test_thread_execution(self):
         download_results, task_results = run_threads()
