@@ -31,8 +31,13 @@ Thread-based Concurrency:
 Uses the threading module to create and manage threads.
 
 Primarily suitable for I/O-bound tasks.
+
 Limited by the GIL for CPU-bound tasks.
+
 Process-based Concurrency:
+
 Uses the multiprocessing module to create separate processes.
+
 Can fully utilize multiple CPU cores for CPU-bound tasks.
+
 Requires more overhead due to process creation and communication.
