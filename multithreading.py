@@ -32,24 +32,32 @@ def run_threads():
         thread = threading.Thread(target=perform_other_task, args=(task_id,))
         task_threads.append(thread)
         thread.start()
-    
-    # Collect results from threads
-    download_results = [thread.join() or thread for thread in download_threads]  # If join returns None, the thread itself is stored.
-    task_results = [thread.join() or thread for thread in task_threads]
-    
-    print("All downloads and tasks are completed.")
-    
-    # Return results for verification
-    return download_results, task_results
 
+    # Collect results and handle exceptions
+    download_results = []
+    for thread in download_threads:
+        try:
+            thread.join()
+            download_results.append(thread.result())
+        except Exception as e:
+            print(f"Error in download thread: {e}")
+
+    task_results = []
+    for thread in task_threads:
+        try:
+            thread.join()
+            task_results.append(thread.result())
+        except Exception as e:
+            print(f"Error in task thread: {e}")
+
+    print("All downloads and tasks are completed.")
+    return download_results, task_results
 
 class TestMultithreading(unittest.TestCase):
     def test_thread_execution(self):
         download_results, task_results = run_threads()
-        # Added assertions to check if all files were downloaded
-        self.assertEqual(sorted([result.result() for result in download_results]), [1, 2, 3, 4, 5]) 
-        # Added assertions to check if all other tasks were completed
-        self.assertEqual(sorted([result.result() for result in task_results]), [1, 2, 3])  
+        self.assertEqual(sorted(download_results), [1, 2, 3, 4, 5])
+        self.assertEqual(sorted(task_results), [1, 2, 3])
 
 if __name__ == "__main__":
-    unittest.main(argv=['first-arg-is-ignored'], exit=False) # exit=False to prevent SystemExit
+    unittest.main(argv=['first-arg-is-ignored'], exit=False)
