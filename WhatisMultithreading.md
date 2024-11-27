@@ -41,3 +41,10 @@ Uses the multiprocessing module to create separate processes.
 Can fully utilize multiple CPU cores for CPU-bound tasks.
 
 Requires more overhead due to process creation and communication.
+
+Benefits of Multithreading:
+
+
+Improved Performance: By executing tasks concurrently, multithreading can significantly improve performance, especially for I/O-bound operations.
+Better Resource Utilization: Multiple threads can utilize available CPU cores efficiently.
+Increased Responsiveness: User interfaces can remain responsive while background tasks are being processed.
