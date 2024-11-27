@@ -19,11 +19,17 @@ Concurrency: Multiple threads can run concurrently, but they share the same proc
 Context Switching: The operating system switches between threads to give each thread a chance to execute.
 
 Thread Safety: It's important to ensure that multiple threads can access shared resources safely, avoiding race conditions and data corruption.
+
 GIL (Global Interpreter Lock): In Python, the GIL limits the execution of Python bytecode to one thread at a time. This can impact the performance of CPU-bound tasks, but it's generally not a significant issue for I/O-bound tasks.
+
 Types of Multithreading:
+
 While Python doesn't directly support multiple threads executing simultaneously due to the GIL, there are two primary approaches to achieve concurrent execution:
+
 Thread-based Concurrency:
+
 Uses the threading module to create and manage threads.
+
 Primarily suitable for I/O-bound tasks.
 Limited by the GIL for CPU-bound tasks.
 Process-based Concurrency:
