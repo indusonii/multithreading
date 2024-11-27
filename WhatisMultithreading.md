@@ -7,11 +7,17 @@ Imagine you have multiple tasks to do. Instead of doing them one by one, you cou
 Multithreading is used in various applications to improve performance and responsiveness. Some common use cases include:
 
 I/O-bound tasks: Downloading files, reading from or writing to files, network operations.
+
 Parallel processing: Breaking down large tasks into smaller subtasks that can be executed in parallel.
+
 User interface responsiveness: Keeping the user interface responsive while performing background tasks.
+
 Key Features of Multithreading:
+
 Concurrency: Multiple threads can run concurrently, but they share the same process resources.
+
 Context Switching: The operating system switches between threads to give each thread a chance to execute.
+
 Thread Safety: It's important to ensure that multiple threads can access shared resources safely, avoiding race conditions and data corruption.
 GIL (Global Interpreter Lock): In Python, the GIL limits the execution of Python bytecode to one thread at a time. This can impact the performance of CPU-bound tasks, but it's generally not a significant issue for I/O-bound tasks.
 Types of Multithreading:
