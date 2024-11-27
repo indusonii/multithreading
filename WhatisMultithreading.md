@@ -7,9 +7,7 @@ Imagine you have multiple tasks to do. Instead of doing them one by one, you cou
 Multithreading is used in various applications to improve performance and responsiveness. Some common use cases include:
 
 I/O-bound tasks: Downloading files, reading from or writing to files, network operations.
-
 Parallel processing: Breaking down large tasks into smaller subtasks that can be executed in parallel.
-
 User interface responsiveness: Keeping the user interface responsive while performing background tasks.
 
 Key Features of Multithreading:
