@@ -20,7 +20,18 @@ Simulates performing another task by sleeping for a random duration and printing
 Creates a list of threads for file downloads and another list for other tasks.
 Starts each thread using the start() method.
 Waits for all threads to finish using the join() method.
-4. Output:
+
+Error Handling:
+
+Uses try-except blocks to catch and handle potential exceptions during thread execution.
+Result Collection:
+
+Collects the results (file IDs and task IDs) from each completed thread.
+Unit Testing:
+
+The TestMultithreading class includes a test case to verify that all files are downloaded and all tasks are completed.
+
+5. Output:
 Prints messages indicating the start and completion of each download and task.
 Prints a final message when all threads have finished.
 
